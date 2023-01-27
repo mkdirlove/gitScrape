@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/mkdirlove/gitScrape"><img src="https://github.com/mkdirlove/gitScrape/blob/main/osfetch.png" alt="gitScrape"></a>
+  <a href="https://github.com/mkdirlove/gitScrape"><img src="https://github.com/mkdirlove/gitScrape/blob/main/logo.png" alt="gitScrape"></a>
   <br>
   Yet another tool for scraping GitHub.
   <br>
