@@ -1,8 +1,19 @@
+import os
+import json
 import argparse
 import requests
-import json
 
-parser = argparse.ArgumentParser(description='Search for top 30 repositories on GitHub')
+banner = """
+   ▄▄ • ▪  ▄▄▄▄▄.▄▄ ·  ▄▄· ▄▄▄   ▄▄▄·  ▄▄▄·▄▄▄ .
+ ▐█ ▀ ▪██ •██  ▐█ ▀. ▐█ ▌▪▀▄ █·▐█ ▀█ ▐█ ▄█▀▄.▀·
+ ▄█ ▀█▄▐█· ▐█.▪▄▀▀▀█▄██ ▄▄▐▀▀▄ ▄█▀▀█  ██▀·▐▀▀▪▄
+ ▐█▄▪▐█▐█▌ ▐█▌·▐█▄▪▐█▐███▌▐█•█▌▐█ ▪▐▌▐█▪·•▐█▄▄▌
+ ·▀▀▀▀ ▀▀▀ ▀▀▀  ▀▀▀▀ ·▀▀▀ .▀  ▀ ▀  ▀ .▀    ▀▀▀ 
+"""
+
+os.system("clear")
+print(banner)
+parser = argparse.ArgumentParser(description='gitScrape - Yet another tool for scraping GitHub.')
 parser.add_argument('-q', '--query', help='Search query', required=True)
 args = parser.parse_args()
 
@@ -17,13 +28,8 @@ if args.query:
     #parse json data
     data = json.loads(response.text)
 
-    print("""
-   ▄▄ • ▪  ▄▄▄▄▄.▄▄ ·  ▄▄· ▄▄▄   ▄▄▄·  ▄▄▄·▄▄▄ .
- ▐█ ▀ ▪██ •██  ▐█ ▀. ▐█ ▌▪▀▄ █·▐█ ▀█ ▐█ ▄█▀▄.▀·
- ▄█ ▀█▄▐█· ▐█.▪▄▀▀▀█▄██ ▄▄▐▀▀▄ ▄█▀▀█  ██▀·▐▀▀▪▄
- ▐█▄▪▐█▐█▌ ▐█▌·▐█▄▪▐█▐███▌▐█•█▌▐█ ▪▐▌▐█▪·•▐█▄▄▌
- ·▀▀▀▀ ▀▀▀ ▀▀▀  ▀▀▀▀ ·▀▀▀ .▀  ▀ ▀  ▀ .▀    ▀▀▀ 
-    """)
+    os.system("clear")
+    print(banner)
     for item in data:
         print(f" Name: https://github.com/{item['name']}")
         print(f" Description: {item['description']}")
