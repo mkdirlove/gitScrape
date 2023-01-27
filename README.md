@@ -2,7 +2,7 @@
   <br>
   <a href="https://github.com/mkdirlove/gitScrape"><img src="https://github.com/mkdirlove/gitScrape/blob/main/logo.png" alt="gitScrape"></a>
   <br>
-  Yet another tool for scraping GitHub.
+  Yet another tool for scraping GitHub repositories.
   <br>
 </h1>
 
